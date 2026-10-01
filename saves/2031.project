@@ -1,0 +1,75 @@
+139200000
+8700000
+0|Design|Chassis|Intense|1|true
+1|Design|Front Wing|Intense|1|true
+2|Design|Rear Wing|Intense|1|true
+3|Design|Sidepod|Intense|1|true
+4|Design|Underfloor|Intense|2|true
+5|Design|Suspension|Intense|2|true
+6|Design|Chassis|Normal|2|true
+7|Design|Front Wing|Normal|2|true
+8|Manufacture|Chassis|Normal|2|true|2
+10|Manufacture|Front Wing|Normal|2|true|3
+11|Manufacture|Rear Wing|Normal|2|true|3
+12|Manufacture|Sidepod|Normal|2|true|2
+9|Manufacture|Underfloor|Normal|3|true|2
+13|Manufacture|Suspension|Normal|3|true|3
+14|Design|Rear Wing|Normal|3|true
+15|Design|Sidepod|Normal|3|true
+16|Design|Underfloor|Normal|3|true
+17|Design|Chassis|Normal|4|true
+18|Design|Suspension|Normal|4|false
+19|Design|Front Wing|Normal|5|false
+20|Design|Rear Wing|Normal|5|false
+21|Design|Sidepod|Normal|5|false
+22|Design|Underfloor|Normal|5|false
+23|Design|Suspension|Normal|6|false
+24|Design|Rear Wing|Normal|7|false
+25|Design|Sidepod|Normal|7|false
+26|Design|Underfloor|Normal|7|false
+27|Design|Chassis|Normal|8|false
+28|Design|Front Wing|Normal|8|false
+29|Design|Suspension|Normal|8|false
+30|Design|Sidepod|Normal|9|false
+31|Design|Underfloor|Normal|9|false
+32|Design|Chassis|Normal|10|false
+33|Design|Front Wing|Normal|10|false
+34|Design|Rear Wing|Normal|10|false
+35|Research|Chassis|Normal|5|false
+36|Research|Underfloor|Normal|6|false
+37|Research|Front Wing|Normal|7|false
+38|Research|Rear Wing|Normal|8|false
+39|Research|Suspension|Normal|9|false
+40|Research|Sidepod|Normal|10|false
+41|Research|Chassis|Normal|10|false
+42|Research|Front Wing|Normal|11|false
+43|Research|Rear Wing|Normal|11|false
+44|Research|Underfloor|Normal|11|false
+45|Research|Suspension|Normal|11|false
+46|Research|Chassis|Normal|12|false
+47|Research|Sidepod|Normal|12|false
+48|Research|Underfloor|Normal|12|false
+49|Research|Suspension|Normal|12|false
+50|Manufacture|Chassis|Normal|3|true|2
+51|Manufacture|Front Wing|Normal|4|true|3
+52|Manufacture|Rear Wing|Normal|4|false|3
+53|Manufacture|Sidepod|Normal|4|false|2
+54|Manufacture|Underfloor|Normal|4|false|2
+55|Manufacture|Chassis|Normal|5|false|3
+56|Manufacture|Suspension|Normal|5|false|2
+57|Manufacture|Rear Wing|Normal|6|false|3
+58|Manufacture|Sidepod|Normal|6|false|2
+59|Manufacture|Underfloor|Normal|6|false|2
+60|Manufacture|Front Wing|Normal|7|false|3
+61|Manufacture|Suspension|Normal|7|false|2
+62|Manufacture|Rear Wing|Normal|8|false|3
+63|Manufacture|Sidepod|Normal|8|false|2
+64|Manufacture|Underfloor|Normal|8|false|2
+65|Manufacture|Chassis|Normal|9|false|2
+66|Manufacture|Front Wing|Normal|9|false|3
+67|Manufacture|Suspension|Normal|9|false|3
+68|Manufacture|Sidepod|Normal|10|false|2
+69|Manufacture|Underfloor|Normal|10|false|2
+70|Manufacture|Chassis|Normal|11|false|2
+71|Manufacture|Front Wing|Normal|11|false|3
+72|Manufacture|Rear Wing|Normal|11|false|3

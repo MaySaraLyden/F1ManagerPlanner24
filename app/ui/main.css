@@ -1,0 +1,113 @@
+.add-project-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-border-color: #439745;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+
+}
+
+.add-project-button:hover {
+    -fx-background-color: #45a049;
+}
+
+.add-project-button:pressed {
+    -fx-background-color: #388e3c;
+}
+
+.project-block {
+    -fx-background-color: #b4d8f5;
+    -fx-border-color: #90CAF9;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 2px;
+    -fx-spacing: 2px;
+}
+
+.research-block {
+    -fx-background-color: #FFDADA;
+    -fx-border-color: #F4A6A6;
+}
+
+.manufacture-block {
+    -fx-background-color: #c8b4f5;
+    -fx-border-color: #b590f9;
+}
+
+.dropdown {
+    -fx-background-color: #90CAF9;
+    -fx-border-color: #64B5F6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-min-height: 18px;
+    -fx-pref-height: 18px;
+    -fx-max-height: 18px;
+    -fx-padding: 0;
+}
+
+.dropdown .list-cell {
+    -fx-padding: 0 3px;
+}
+
+.dropdown:hover {
+    -fx-background-color: #64B5F6;
+}
+
+.dropdown:pressed {
+    -fx-background-color: #42A5F5;
+}
+
+.research-block .dropdown {
+    -fx-background-color: #ffc5c5;
+    -fx-border-color: #f39191;
+}
+
+.research-block .dropdown:hover {
+    -fx-background-color: #f88585;
+}
+
+.research-block .dropdown:pressed {
+    -fx-background-color: #ca4b4b;
+}
+
+.manufacture-block .dropdown {
+    -fx-background-color: #a884fc;
+    -fx-border-color: #8162ca;
+}
+
+.manufacture-block .dropdown:hover {
+    -fx-background-color: #9162ff;
+}
+
+.manufacture-block .dropdown:pressed {
+    -fx-background-color: #643ebd;
+}
+
+.drag-handle {
+    -fx-background-color: #90CAF9;
+    -fx-background-radius: 0 3px 3px 0;
+    -fx-cursor: hand;
+}
+
+.project-block .drag-handle {
+    -fx-background-color: #90CAF9;
+}
+
+.research-block .drag-handle {
+    -fx-background-color: #F4A6A6;
+}
+
+.manufacture-block .drag-handle {
+    -fx-background-color: #B590F9;
+}
+
+.overlay-scroll-pane > .scroll-bar:vertical {
+    -fx-opacity: 0;
+}
+
+.month-label {
+}
+
