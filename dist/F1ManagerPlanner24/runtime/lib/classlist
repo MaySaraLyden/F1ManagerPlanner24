@@ -1257,7 +1257,6 @@ jdk/internal/util/ArraysSupport
 jdk/internal/util/ByteArray
 jdk/internal/util/ClassFileDumper
 jdk/internal/util/DecimalDigits
-jdk/internal/util/EnvUtils
 jdk/internal/util/Exceptions
 jdk/internal/util/ModifiedUtf
 jdk/internal/util/Preconditions
@@ -1281,7 +1280,6 @@ jdk/internal/vm/Continuation$Pinned
 jdk/internal/vm/ContinuationScope
 jdk/internal/vm/ContinuationSupport
 jdk/internal/vm/FillerObject
-jdk/internal/vm/PostVMInitHook
 jdk/internal/vm/SharedThreadContainer
 jdk/internal/vm/StackChunk
 jdk/internal/vm/StackableScope
@@ -1397,7 +1395,6 @@ sun/security/util/Debug
 sun/security/util/SecurityProperties
 sun/security/util/SignatureFileVerifier
 sun/text/resources/cldr/FormatData
-sun/usagetracker/UsageTrackerClient
 sun/util/PreHashedMap
 sun/util/calendar/AbstractCalendar
 sun/util/calendar/BaseCalendar
