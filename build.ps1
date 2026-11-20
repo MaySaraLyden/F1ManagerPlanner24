@@ -62,6 +62,9 @@ $Namespace.AddNamespace("m", "http://maven.apache.org/POM/4.0.0")
 $ArtifactId = $Pom.SelectSingleNode("/m:project/m:artifactId", $Namespace).InnerText
 $Version = $Pom.SelectSingleNode("/m:project/m:version", $Namespace).InnerText
 
+$ReleaseName = "$AppName-$Version"
+$ZipName = "$ReleaseName.zip"
+
 $JarName = "$ArtifactId-$Version.jar"
 $JarPath = Join-Path $TargetDir $JarName
 
@@ -151,7 +154,7 @@ if ($CreateZip) {
     Write-Host ""
     Write-Host "Creating ZIP archive..."
 
-    $ZipPath = Join-Path $DistDir "$AppName.zip"
+    $ZipPath = Join-Path $DistDir $ZipName
 
     Compress-Archive `
         -Path $AppImageDir `
@@ -169,6 +172,7 @@ Write-Host "===================================="
 Write-Host ""
 
 Write-Host "Application: $AppImageDir"
+Write-Host "Version: $Version"
 
 if ($CreateZip) {
     Write-Host "ZIP archive: $ZipPath"
