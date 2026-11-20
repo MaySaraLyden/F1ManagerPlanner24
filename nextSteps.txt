@@ -1,3 +1,7 @@
+- Finance graph w/monthly updates & other costs
+- Set, preview and confirm level of performance based sponsor payouts
+
+
 - Undo/Redo
 - New Window for other costs
 - Add other costs (data)
