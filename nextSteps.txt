@@ -1,10 +1,16 @@
+# FEATURES
 - Finance graph w/monthly updates & other costs
 - Set, preview and confirm level of performance based sponsor payouts
-
-
+- Scale UI
+## ui
 - Undo/Redo
-- New Window for other costs
+- New 'Finance' window
+- Move cost cap input to Finance window
+## backend
 - Add other costs (data)
-- Add other costs & cost cap (ui)
+- Add income sources (data)
+- Add sponsor payout level (data)
 - Add more stats (# of projects, # of projects per part, # of projects per type)
-- add finance stats to new window (graph?)
+
+# KNOWN BUGS
+- Window doesn't resize when adding new blocks (stays too small)
