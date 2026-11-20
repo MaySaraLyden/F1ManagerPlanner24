@@ -27,31 +27,6 @@ Write-Host " Building $AppName"
 Write-Host "===================================="
 Write-Host ""
 
-# ----- Find jpackage -----
-
-$JpackageCommand = Get-Command jpackage -ErrorAction SilentlyContinue
-
-if ($JpackageCommand) {
-    $Jpackage = $JpackageCommand.Source
-}
-else {
-    # Find jpackage beside javac if it is not on PATH
-    $JavacCommand = Get-Command javac -ErrorAction SilentlyContinue
-
-    if (-not $JavacCommand) {
-        throw "Cannot find javac. Make sure Oracle JDK 25 is installed."
-    }
-
-    $JdkBin = Split-Path $JavacCommand.Source
-    $Jpackage = Join-Path $JdkBin "jpackage.exe"
-
-    if (-not (Test-Path $Jpackage)) {
-        throw "Cannot find jpackage.exe in $JdkBin"
-    }
-}
-
-Write-Host "Using jpackage: $Jpackage"
-
 # ----- Read Maven project information -----
 
 [xml]$Pom = Get-Content (Join-Path $ProjectDir "pom.xml")
@@ -80,6 +55,64 @@ Write-Host "Cleaning previous builds..."
 if ($LASTEXITCODE -ne 0) {
     throw "Maven build failed."
 }
+
+
+# ----- Find JDK 25 provisioned by Maven -----
+
+Write-Host ""
+Write-Host "Locating JDK 25..."
+
+$MavenJdksDir = Join-Path $env:USERPROFILE ".m2\jdks"
+
+if (-not (Test-Path $MavenJdksDir)) {
+    throw "Maven JDK directory not found: $MavenJdksDir"
+}
+
+$JdkCandidates = Get-ChildItem `
+    -Path $MavenJdksDir `
+    -Filter "jpackage.exe" `
+    -File `
+    -Recurse `
+    -ErrorAction SilentlyContinue
+
+$Jpackage = $null
+
+foreach ($Candidate in $JdkCandidates) {
+
+    $JdkBin = $Candidate.DirectoryName
+    $Javac = Join-Path $JdkBin "javac.exe"
+    $Jlink = Join-Path $JdkBin "jlink.exe"
+
+    if (-not (Test-Path $Javac) -or -not (Test-Path $Jlink)) {
+        continue
+    }
+
+    $JavacVersion = (& $Javac -version 2>&1 | Out-String).Trim()
+
+    if ($JavacVersion -match '^javac 25(?:\.|\s|$)') {
+        $Jpackage = $Candidate.FullName
+        break
+    }
+}
+
+if (-not $Jpackage) {
+    throw "Could not find a complete JDK 25 installation in $MavenJdksDir. Run Maven first to provision it."
+}
+
+$JdkBin = Split-Path $Jpackage
+$JdkHome = Split-Path $JdkBin
+
+Write-Host "Using JDK: $JdkHome"
+Write-Host "Using jpackage: $Jpackage"
+
+$JpackageVersion = (& $Jpackage --version 2>&1 | Out-String).Trim()
+
+Write-Host "jpackage version: $JpackageVersion"
+
+if ($JpackageVersion -notmatch '^25(?:\.|\s|$)') {
+    throw "Expected jpackage version 25, got: $JpackageVersion"
+}
+
 
 # ----- Copy JavaFX dependencies -----
 
