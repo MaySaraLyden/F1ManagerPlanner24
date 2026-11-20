@@ -161,7 +161,7 @@ public class MainWindow extends Application {
         saveChooser.setTitle("SaveProject");
         saveChooser.setInitialFileName("projects.project");
 
-        File directory = new File("saves");
+        File directory = new File(Launcher.getApplicationDirectory(),"saves");
 
         if (!directory.exists()) {
             directory.mkdirs();
@@ -188,7 +188,7 @@ public class MainWindow extends Application {
 
         loadChooser.setTitle("Load Projects");
 
-        File directory = new File("saves");
+        File directory = new File(Launcher.getApplicationDirectory(),"saves");
 
         if (!directory.exists()) {
             directory.mkdirs();
